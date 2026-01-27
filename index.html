@@ -16,11 +16,12 @@
     }
 
     /* VIDEO BACKGROUND */
-    .video-bg {
+    /* GIF BACKGROUND */
+    .gif-bg {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      object-fit: cover;
+      background: url('background.gif') center center / cover no-repeat;
       z-index: -3;
     }
 
@@ -110,10 +111,8 @@
 </head>
 <body>
 
-<!-- BACKGROUND VIDEO -->
-<video class="video-bg" autoplay muted loop playsinline>
-  <source src="background.mp4" type="video/mp4">
-</video>
+<!-- BACKGROUND GIF -->
+<div class="gif-bg"></div>
 <div class="overlay"></div>
 <div class="stars"></div>
 
