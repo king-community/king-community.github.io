@@ -18,72 +18,93 @@
     /* VIDEO BACKGROUND */
     .video-bg {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       object-fit: cover;
-      z-index: -2;
+      z-index: -3;
     }
 
     /* DARK OVERLAY */
     .overlay {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.65);
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(0,0,0,0.55), rgba(0,0,0,0.85));
+      z-index: -2;
+    }
+
+    /* PARTICLES */
+    .stars {
+      position: fixed;
+      inset: 0;
+      background: url('https://raw.githubusercontent.com/JulianLaval/canvas-particle-network/master/demo/img/stars.png');
+      animation: moveStars 120s linear infinite;
+      opacity: 0.25;
       z-index: -1;
+    }
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -2000px 2000px; }
     }
 
     header {
-      padding: 90px 20px;
+      padding: 110px 20px 80px;
     }
     header h1 {
-      font-size: 3.2rem;
+      font-size: 3.5rem;
       margin-bottom: 10px;
+      text-shadow: 0 0 20px gold, 0 0 40px orange;
     }
     header p {
       color: #fff;
-      opacity: 0.85;
+      opacity: 0.9;
     }
+
     .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 15px 35px;
-      border-radius: 40px;
+      margin-top: 35px;
+      padding: 16px 38px;
+      border-radius: 50px;
       background: linear-gradient(45deg, gold, orange);
       color: #000;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 25px gold;
-      transition: transform 0.2s ease;
+      box-shadow: 0 0 30px gold;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
     .btn:hover {
-      transform: scale(1.05);
+      transform: scale(1.08);
+      box-shadow: 0 0 45px orange;
     }
+
     section {
-      padding: 70px 20px;
+      padding: 80px 20px;
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      max-width: 900px;
+      gap: 30px;
+      max-width: 950px;
       margin: auto;
     }
+
     .card {
-      background: rgba(0,0,0,0.65);
+      background: rgba(0,0,0,0.7);
       border: 1px solid gold;
-      border-radius: 22px;
-      padding: 30px;
-      box-shadow: 0 0 20px rgba(255,215,0,0.35);
+      border-radius: 25px;
+      padding: 32px;
+      box-shadow: 0 0 25px rgba(255,215,0,0.4);
+      backdrop-filter: blur(6px);
+      transition: transform 0.25s ease;
     }
+    .card:hover {
+      transform: translateY(-8px) scale(1.03);
+    }
+
     footer {
-      padding: 35px;
+      padding: 40px;
       font-size: 0.9rem;
-      opacity: 0.75;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -94,6 +115,7 @@
   <source src="background.mp4" type="video/mp4">
 </video>
 <div class="overlay"></div>
+<div class="stars"></div>
 
 <header>
   <h1>👑 KING Community</h1>
@@ -105,7 +127,7 @@
   <h2>Why KING?</h2>
   <div class="cards">
     <div class="card">🚀 Competitive Starblast players</div>
-    <div class="card">👑 Friendly & powerful community</div>
+    <div class="card">👑 Strong & loyal community</div>
     <div class="card">🛠️ Mods, events & custom games</div>
     <div class="card">🌍 International clan</div>
   </div>
@@ -113,7 +135,7 @@
 
 <section>
   <h2>Official Clan Tag</h2>
-  <p style="font-size:1.6rem;">[KING]</p>
+  <p style="font-size:1.7rem; text-shadow:0 0 15px gold;">[KING]</p>
 </section>
 
 <footer>
