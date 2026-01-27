@@ -10,15 +10,38 @@
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle at top, #2b1d00, #000);
       color: #ffd700;
       text-align: center;
+      overflow-x: hidden;
     }
+
+    /* VIDEO BACKGROUND */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* DARK OVERLAY */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.65);
+      z-index: -1;
+    }
+
     header {
-      padding: 60px 20px;
+      padding: 90px 20px;
     }
     header h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
       margin-bottom: 10px;
     }
     header p {
@@ -27,40 +50,50 @@
     }
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 15px 30px;
+      margin-top: 30px;
+      padding: 15px 35px;
       border-radius: 40px;
       background: linear-gradient(45deg, gold, orange);
       color: #000;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 20px gold;
+      box-shadow: 0 0 25px gold;
+      transition: transform 0.2s ease;
+    }
+    .btn:hover {
+      transform: scale(1.05);
     }
     section {
-      padding: 60px 20px;
+      padding: 70px 20px;
     }
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      gap: 25px;
       max-width: 900px;
       margin: auto;
     }
     .card {
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
       border: 1px solid gold;
-      border-radius: 20px;
-      padding: 25px;
-      box-shadow: 0 0 15px rgba(255,215,0,0.3);
+      border-radius: 22px;
+      padding: 30px;
+      box-shadow: 0 0 20px rgba(255,215,0,0.35);
     }
     footer {
-      padding: 30px;
+      padding: 35px;
       font-size: 0.9rem;
-      opacity: 0.7;
+      opacity: 0.75;
     }
   </style>
 </head>
 <body>
+
+<!-- BACKGROUND VIDEO -->
+<video class="video-bg" autoplay muted loop playsinline>
+  <source src="background.mp4" type="video/mp4">
+</video>
+<div class="overlay"></div>
 
 <header>
   <h1>👑 KING Community</h1>
@@ -72,15 +105,15 @@
   <h2>Why KING?</h2>
   <div class="cards">
     <div class="card">🚀 Competitive Starblast players</div>
-    <div class="card">👑 Friendly & strong community</div>
+    <div class="card">👑 Friendly & powerful community</div>
     <div class="card">🛠️ Mods, events & custom games</div>
     <div class="card">🌍 International clan</div>
   </div>
 </section>
 
 <section>
-  <h2>Clan Tag</h2>
-  <p style="font-size:1.5rem;">[KING]</p>
+  <h2>Official Clan Tag</h2>
+  <p style="font-size:1.6rem;">[KING]</p>
 </section>
 
 <footer>
