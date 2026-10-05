@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOT Server List | Starblast.io</title>
+    <style>
+        :root {
+            --bg-color: #050b14;
+            --panel-bg: rgba(10, 25, 47, 0.75);
+            --neon-blue: #00f3ff;
+            --neon-blue-glow: rgba(0, 243, 255, 0.4);
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent-pink: #ff0055;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(circle at 50% 50%, #0a192f 0%, #02060d 100%);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue-glow), 0 0 20px var(--neon-blue-glow);
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        .publisher-info {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .publisher-info span {
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .neon-btn {
+            background: transparent;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px var(--neon-blue-glow);
+            text-transform: uppercase;
+        }
+
+        .neon-btn:hover, .neon-btn.active {
+            background: var(--neon-blue);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--neon-blue), 0 0 30px var(--neon-blue-glow);
+        }
+
+        .server-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .server-card {
+            background: var(--panel-bg);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .server-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--neon-blue);
+            box-shadow: 0 0 15px var(--neon-blue-glow);
+        }
+
+        .server-info h3 {
+            margin: 0 0 8px 0;
+            color: var(--neon-blue);
+            font-size: 1.2rem;
+        }
+
+        .server-details {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--neon-blue);
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--neon-blue);
+        }
+
+        .clan-highlight {
+            color: var(--accent-pink);
+            font-weight: bold;
+            text-shadow: 0 0 5px rgba(255, 0, 85, 0.4);
+        }
+
+        .join-btn {
+            background: linear-gradient(135deg, #00f3ff 0%, #0066ff 100%);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 10px var(--neon-blue-glow);
+            transition: opacity 0.2s;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .join-btn:hover {
+            opacity: 0.85;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>EOT SERVER LIST</h1>
+            <div class="publisher-info">Owner & Publisher: <span>friv</span></div>
+        </header>
+
+        <div class="filters">
+            <button class="neon-btn active">All Servers</button>
+            <button class="neon-btn">EU</button>
+            <button class="neon-btn">USA</button>
+            <button class="neon-btn">ASIA</button>
+            <button class="neon-btn">Survival</button>
+            <button class="neon-btn">Team</button>
+        </div>
+
+        <div class="server-grid">
+            <!-- Օրինակ 1: Survival Մատչ -->
+            <div class="server-card">
+                <div class="server-info">
+                    <h3>EU #3 — Survival Mode</h3>
+                    <div class="server-details">
+                        <span>Players: <strong>38/50</strong></span>
+                        <span class="badge">EU Region</span>
+                        <span class="clan-highlight">🛡️ NVR Clan: 4 players inside</span>
+                    </div>
+                </div>
+                <a href="https://starblast.io" target="_blank" class="join-btn">JOIN GAME</a>
+            </div>
+
+            <!-- Օրինակ 2: Team Մատչ -->
+            <div class="server-card">
+                <div class="server-info">
+                    <h3>USA #1 — Team Mode</h3>
+                    <div class="server-details">
+                        <span>Players: <strong>52/60</strong></span>
+                        <span class="badge">USA Region</span>
+                        <span>Clans: None active</span>
+                    </div>
+                </div>
+                <a href="https://starblast.io" target="_blank" class="join-btn">JOIN GAME</a>
+            </div>
+
+            <!-- Օրինակ 3: ASIA Մատչ -->
+            <div class="server-card">
+                <div class="server-info">
+                    <h3>ASIA #2 — Survival Mode</h3>
+                    <div class="server-details">
+                        <span>Players: <strong>24/50</strong></span>
+                        <span class="badge">ASIA Region</span>
+                        <span class="clan-highlight">🛡️ NVR Clan: 2 players inside</span>
+                    </div>
+                </div>
+                <a href="https://starblast.io" target="_blank" class="join-btn">JOIN GAME</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
